@@ -49,7 +49,7 @@ func sendToOpenAI(prompt string, apiKey string) (string, error) {
 	messages := []Message{
 		{
 			Role:    "system",
-			Content: "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.",
+			Content: "You are a problem solver and only return the correct answer, without any other text.",
 		},
 		{
 			Role:    "user",
@@ -58,7 +58,7 @@ func sendToOpenAI(prompt string, apiKey string) (string, error) {
 	}
 
 	requestBody := OpenAIRequest{
-		Model:    "gpt-3.5-turbo", // Change this to the appropriate model
+		Model:    "gpt-4o", // Change this to the appropriate model
 		Messages: messages,
 	}
 
